@@ -1,0 +1,89 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>PowerThrottlingGit</groupId>
+  <artifactId>PowerThrottlingGit</artifactId>
+  <version>1.0.0-SNAPSHOT</version>
+  <name>PowerThrottling</name>
+  <description>An eclipse plugin used to disable power throttling in Eclipse on Windows</description>
+  <build>
+    <sourceDirectory>src</sourceDirectory>
+    <plugins>
+
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-jar-plugin</artifactId>
+            <version>3.4.2</version>
+            <configuration>
+                <archive>
+                    <manifestFile>${project.basedir}/META-INF/MANIFEST.MF</manifestFile>
+                    <addMavenDescriptor>false</addMavenDescriptor>
+                </archive>
+            </configuration>
+        </plugin>
+
+    </plugins>  
+    
+    <resources>
+        <resource>
+            <directory>${project.basedir}</directory>
+            <includes>
+                <include>plugin.xml</include>
+            </includes>
+        </resource>
+    </resources>
+  </build>
+  
+  <dependencies>
+    <dependency>
+	    <groupId>org.eclipse.platform</groupId>
+	    <artifactId>org.eclipse.core.runtime</artifactId>
+	    <version>3.32.0</version>
+  	</dependency>
+  	<dependency>
+	    <groupId>org.eclipse.platform</groupId>
+	    <artifactId>org.eclipse.ui</artifactId>
+	    <version>3.207.0</version>
+  	</dependency>
+  	<dependency>
+	    <groupId>org.eclipse.platform</groupId>
+	    <artifactId> org.eclipse.core.resources</artifactId>
+	    <version>3.22.0</version>
+  	</dependency>
+	<dependency>
+	    <groupId>net.java.dev.jna</groupId>
+	    <artifactId>jna</artifactId>
+	    <version>5.16.0</version>
+	</dependency>
+	<dependency>
+	    <groupId>net.java.dev.jna</groupId>
+	    <artifactId>jna-platform</artifactId>
+	    <version>5.16.0</version>
+	</dependency>
+	<dependency>
+	    <groupId>org.eclipse.platform</groupId>
+	    <artifactId>org.eclipse.swt</artifactId>
+	    <version>3.128.0</version>
+	</dependency>
+	<dependency>
+	    <groupId>org.eclipse.platform</groupId>
+	    <artifactId>org.eclipse.swt.win32.win32.x86_64</artifactId>
+	    <version>3.128.0</version>
+	</dependency>
+	<dependency>
+	    <groupId>org.apache.maven.plugins</groupId>
+	    <artifactId>maven-jar-plugin</artifactId>
+	    <version>3.4.2</version>
+	</dependency>
+
+
+  </dependencies>
+  
+	<repositories>
+	    <repository>
+	        <id>eclipse-p2</id>
+	        <url>https://repo.eclipse.org/content/repositories/p2</url>
+	    </repository>
+	</repositories>
+
+
+</project>

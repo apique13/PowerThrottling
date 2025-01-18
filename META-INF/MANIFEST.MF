@@ -3,7 +3,7 @@ Bundle-ManifestVersion: 2
 Bundle-Name: PowerThrottling
 Bundle-SymbolicName: PowerThrottling;singleton:=true
 Bundle-Vendor: Alexandre Pique
-Bundle-Version: 1.0.0.0
+Bundle-Version: 1.0.0
 Bundle-Activator: com.apique.PowerThrottling.Activator
 Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime,
