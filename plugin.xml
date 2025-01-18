@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         id="com.apique.PowerThrottling.StartupHandler"
+         name="StartupHandler"
+         point="org.eclipse.ui.startup">
+         <startup
+          class="com.apique.PowerThrottling.StartupHandler">
+    	</startup>
+   </extension>
+
+   <extension
+         point="org.eclipse.ui.preferencePages">
+      <page
+            class="com.apique.PowerThrottling.preferences.PowerThrottlingPreferencePage"
+            id="PowerThrottling.preferences.PowerThrottlingPreferencePage"
+            name="PowerThrottling Preferences">
+      </page>
+   </extension>
+   <extension
+         point="org.eclipse.core.runtime.preferences">
+      <initializer
+            class="com.apique.PowerThrottling.preferences.PreferenceInitializer">
+      </initializer>
+   </extension>
+
+</plugin>

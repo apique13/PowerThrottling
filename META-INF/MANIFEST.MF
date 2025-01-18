@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: PowerThrottling
+Bundle-SymbolicName: PowerThrottling;singleton:=true
+Bundle-Vendor: Alexandre Pique
+Bundle-Version: 1.0.0.0
+Bundle-Activator: com.apique.PowerThrottling.Activator
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.eclipse.core.resources,
+ com.sun.jna.platform;bundle-version="5.15.0",
+ com.sun.jna;bundle-version="5.15.0"
+Bundle-RequiredExecutionEnvironment: JavaSE-17
+Automatic-Module-Name: EfficientWorkaround
+Bundle-ActivationPolicy: lazy
